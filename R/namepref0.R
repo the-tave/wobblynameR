@@ -11,9 +11,10 @@
 #' @examples
 #' bla <- tibble::tibble(x_ar = 1:5, y_ar = 6:10)
 #' blo <- namepref0(bla, "z_")
-#'
 #' names(bla)
+#'  > "x_ar" "y_ar"
 #' names(blo)
+#'  > "z_x_ar" "z_y_ar"
 #' 
 namepref0 <- function(dataframe, pref_new){
   

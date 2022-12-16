@@ -18,22 +18,15 @@
 #' names(blo)
 #'
 namepref <- function(dataframe, pref_old, pref_new){
-  # This function strips the old prefix from the variable names of dataframe. It then adds the new prefix where the old one was
-  # and changes the dataframe's names to the new ones.
-
-  # pref_old and pref_new must be character strings, dataframe must be a dataframe
-
-  # namedf <- tibble::as_tibble(names(dataframe))  %>%
-  #   dplyr::mutate(stripped = ifelse(startsWith(value, pref_old), substr(value, (nchar(pref_old)+1), nchar(value)), value),
-  #                 # stripped = ifelse(startsWith(value, pref_old), substr(value, 3, nchar(value)), value),
-  #                 new_names = ifelse(startsWith(value, pref_old), paste0(pref_new, stripped), value))
-  #
-  # names(dataframe) <- namedf %>% dplyr::pull(new_names)
+ # pref_old and pref_new must be character strings, dataframe must be a dataframe
 
   namedf <- tibble::as_tibble(names(dataframe))  |>
-    dplyr::mutate(stripped = ifelse(startsWith(value, pref_old), substr(value, (nchar(pref_old)+1), nchar(value)), value),
-                  # stripped = ifelse(startsWith(value, pref_old), substr(value, 3, nchar(value)), value),
-                  new_names = ifelse(startsWith(value, pref_old), paste0(pref_new, stripped), value))
+    dplyr::mutate(stripped = ifelse(startsWith(value, pref_old), 
+                                    substr(value, (nchar(pref_old)+1), nchar(value)), 
+                                    value),
+                  new_names = ifelse(startsWith(value, pref_old), 
+                                     paste0(pref_new, stripped), 
+                                     value))
 
   names(dataframe) <- namedf |> dplyr::pull(new_names)
 
