@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+HowToRPackage.R
+functions.R

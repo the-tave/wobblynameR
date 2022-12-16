@@ -1,4 +1,4 @@
-#' Add name prefix
+#' Add variable name prefix (with substitution)
 #'
 #' This function strips the old prefix from the variable names of dataframe.
 #' It then adds the new prefix where the old one was and changes the dataframe's names to the new ones.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/namepref.R
 \name{namepref}
 \alias{namepref}
-\title{Add name prefix}
+\title{Add variable name prefix (with substitution)}
 \usage{
 namepref(dataframe, pref_old, pref_new)
 }
