@@ -2,3 +2,4 @@
 
 export(namepref)
 export(namepref0)
+export(namesuff)

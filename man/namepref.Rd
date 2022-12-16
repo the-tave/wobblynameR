@@ -11,10 +11,10 @@ namepref(dataframe, pref_old, pref_new)
 
 \item{pref_old}{Old prefix character that some or all variables in the dataframe have}
 
-\item{pref_new}{New prefix character that shall replace the old one}
+\item{pref_new}{New prefix character to replace the old one}
 }
 \value{
-Returns dataframe with those variables renamed, that start wwith the old prefix.
+Returns dataframe with those variables renamed that start with the old prefix.
 }
 \description{
 This function strips the old prefix from the variable names of dataframe.
@@ -23,7 +23,6 @@ It then adds the new prefix where the old one was and changes the dataframe's na
 \examples{
 bla <- tibble::tibble(x_ar = 1:5, y_ar = 6:10)
 blo <- namepref(bla, "x_", "z_")
-
 names(bla)
 names(blo)
 

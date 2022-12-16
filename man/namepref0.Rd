@@ -9,10 +9,10 @@ namepref0(dataframe, pref_new)
 \arguments{
 \item{dataframe}{A dataframe}
 
-\item{pref_new}{New prefix character that shall replace the old one}
+\item{pref_new}{New prefix character to be added to existing varnames}
 }
 \value{
-Returns dataframe with those variables renamed, that start wwith the old prefix.
+Returns dataframe with those variables renamed, that start with the old prefix.
 }
 \description{
 This function adds the new prefix and changes the dataframe's names to the new ones.
@@ -20,8 +20,9 @@ This function adds the new prefix and changes the dataframe's names to the new o
 \examples{
 bla <- tibble::tibble(x_ar = 1:5, y_ar = 6:10)
 blo <- namepref0(bla, "z_")
-
 names(bla)
+# "x_ar" "y_ar"
 names(blo)
+# "z_x_ar" "z_y_ar"
 
 }

@@ -3,18 +3,18 @@
 #' This function adds the new prefix and changes the dataframe's names to the new ones.
 #'
 #' @param dataframe A dataframe
-#' @param pref_new New prefix character that shall replace the old one
+#' @param pref_new New prefix character to be added to existing varnames
 #'
-#' @return Returns dataframe with those variables renamed, that start wwith the old prefix.
+#' @return Returns dataframe with those variables renamed, that start with the old prefix.
 #' @export
 #'
 #' @examples
 #' bla <- tibble::tibble(x_ar = 1:5, y_ar = 6:10)
 #' blo <- namepref0(bla, "z_")
 #' names(bla)
-#'  > "x_ar" "y_ar"
+#' # "x_ar" "y_ar"
 #' names(blo)
-#'  > "z_x_ar" "z_y_ar"
+#' # "z_x_ar" "z_y_ar"
 #' 
 namepref0 <- function(dataframe, pref_new){
   
