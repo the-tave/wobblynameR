@@ -20,7 +20,7 @@ Remove a suffix from all variable names in a datafrme
 }
 \examples{
 bla <- tibble::tibble(ar_x = 1:5, ar_y = 6:10)
-blo <- namesuff(bla, "_x")
+blo <- suffstrip(bla, "_x")
 names(bla)
 names(blo)
 
