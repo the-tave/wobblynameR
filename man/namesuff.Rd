@@ -2,7 +2,7 @@
 % Please edit documentation in R/namesuff.R
 \name{namesuff}
 \alias{namesuff}
-\title{Title}
+\title{Add variable name suffix (with substitution)}
 \usage{
 namesuff(dataframe, suf_old, suf_new)
 }
@@ -11,7 +11,7 @@ namesuff(dataframe, suf_old, suf_new)
 
 \item{suf_old}{Old suffix character that some or all variables in the dataframe have}
 
-\item{suf_new}{New prefix character to replace the old one}
+\item{suf_new}{New suffix character to replace the old one}
 }
 \value{
 Returns dataframe with those variables renamed that end with the old suffix.

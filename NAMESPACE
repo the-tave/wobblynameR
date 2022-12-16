@@ -3,3 +3,5 @@
 export(namepref)
 export(namepref0)
 export(namesuff)
+export(namesuff0)
+export(suffstrip)
